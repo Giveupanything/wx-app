@@ -1,0 +1,8 @@
+<!--components/mine-tool/mine-tool.wxml-->
+<view class="tool-item">
+    <view class="tool-icon-wrap" style="background-color: {{toolItem.iconBgColor}};">
+        <image class="tool-icon" src="{{toolItem.iconPath}}" mode="aspectFill" />
+    </view>
+    <text class="tool-text">{{toolItem.toolText}}</text>
+    <view>></view>
+</view>

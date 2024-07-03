@@ -1,1 +1,48 @@
 /* pages/mine/mine.wxss */
+.mine-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #FAFAFA;
+}
+
+.mine-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 400rpx;
+    box-sizing: border-box;
+    padding: 100rpx 40rpx 250rpx;
+    border-bottom-left-radius: 50rpx;
+    border-bottom-right-radius: 50rpx;
+    background-color: #6594C0;
+    color: #fff;
+}
+
+.user-avatar {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    border: 10rpx solid red;
+    overflow: hidden;
+}
+
+.user-nickname {
+    flex-grow: 1;
+    padding-left: 30rpx;
+}
+
+.mine-main {
+    position: absolute;
+    top: 250rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    /* height: 200rpx; */
+    box-sizing: border-box;
+    padding: 20rpx;
+    border-radius: 20rpx;
+    margin: 0;
+    background-color: #fff;
+}

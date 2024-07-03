@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "我的"
+    "usingComponents": {
+        "mine-tool": "../../components/mine-tool/mine-tool"
+    },
+    "navigationBarTitleText": "我的"
 }
