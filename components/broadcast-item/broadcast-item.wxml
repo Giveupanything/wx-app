@@ -1,0 +1,6 @@
+<!--components/broadcast-item/broadcast-item.wxml-->
+<view class="item">
+    <view class="item-title">{{data.title}}</view>
+    <view class="item-content">{{data.content}}</view>
+    <view class="item-time">{{data.createdAt}}</view>
+</view>
