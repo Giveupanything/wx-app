@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "broadcast-item": "../../components/broadcast-item/broadcast-item"
+    }
+}

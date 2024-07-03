@@ -1,0 +1,31 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+    <view class="top-nav">
+        <view class="top-nav-item">
+            <image class="nav-img" src="../../images/house.png" mode="aspectFit" />
+            <text>我的房屋</text>
+        </view>
+        <view class="top-nav-item">
+            <image class="nav-img" src="../../images/myfix.png" mode="aspectFit" />
+            <text>在线报修</text>
+        </view>
+        <view class="top-nav-item">
+            <image class="nav-img" src="../../images/visitor.png" mode="aspectFit" />
+            <text>访客邀请</text>
+        </view>
+    </view>
+    <view class="banner">
+        <image class="banner-img" src="../../images/banner.png" mode="aspectFill" />
+    </view>
+    <view class="broadcast">
+        <view class="broadcast-title">
+            <image class="broadcast-icon" src="../../images/broadcast.png" mode="" />
+            <text>社区</text>
+            <text>公告</text>
+        </view>
+
+        <view class="broadcast-item" wx:for="{{broadcastData}}" wx:for-index="idx" wx:key="idx">
+            <broadcast-item data="{{item}}"></broadcast-item>
+        </view>
+    </view>
+</view>
