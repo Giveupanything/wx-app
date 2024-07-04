@@ -1,4 +1,4 @@
-const baseURL = 'https://live-api.itheima.net/'
+const baseURL = 'https://live-api.itheima.net'
 
 export default function (config) {
     return new Promise((resolve, reject) => {

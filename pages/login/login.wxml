@@ -6,12 +6,17 @@
     </view>
     <view class="main">
         <view class="phone">
-            <input class="phone-inp" type="number" placeholder="请输入手机号码" placeholder-class="phclass" />
+            <input class="phone-inp" type="number" model:value="{{mobile}}" placeholder="请输入手机号码" placeholder-class="phclass" />
             <button class="getVerifyCode" plain bind:tap="handleGetVerifyCode">获取验证码</button>
         </view>
         <view class="verify">
-            <input class="verify-inp" type="number" placeholder="请输入6位验证码" placeholder-class="phclass" />
+            <input model:value="{{verifyCode}}" class="verify-inp" type="number" placeholder="请输入6位验证码" placeholder-class="phclass" />
         </view>
         <text class="tip">未注册手机号经验证后将自动注册</text>
+    </view>
+
+    <view class="login-btn" bind:tap="handleLogin">
+        <image class="login-img" src="../../images/login.png" mode="aspectFit" />
+        <text class="login-txt">登录</text>
     </view>
 </view>
