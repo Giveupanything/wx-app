@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/broadcast-item/broadcast-item",
           "pathName": "pages/broadcast-item/broadcast-item",
           "query": "item=%5Bobject%20Object%5D",

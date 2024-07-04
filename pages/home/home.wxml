@@ -1,5 +1,6 @@
 <!--pages/home/home.wxml-->
 <view class="container">
+    <button bindtap="handleLogin">登录</button>
     <view class="top-nav">
         <navigator class="top-nav-item" url="../myhouse/myhouse?toolText=我的房屋" open-type="navigate">
             <image class="nav-img" src="../../images/house.png" mode="aspectFit" />

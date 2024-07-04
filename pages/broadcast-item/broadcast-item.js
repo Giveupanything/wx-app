@@ -28,7 +28,7 @@ Page({
                     broadcastData: res.data.data
                 })
             },
-            error: function () {
+            fail: function () {
                 console.log('error');
             },
             complete: function () {

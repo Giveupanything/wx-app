@@ -31,5 +31,5 @@
 
 .main{
     color: #333;
-    line-height: 48rpx;
+    line-height: 50rpx;
 }
