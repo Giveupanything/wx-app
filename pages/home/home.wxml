@@ -1,18 +1,18 @@
 <!--pages/home/home.wxml-->
 <view class="container">
     <view class="top-nav">
-        <view class="top-nav-item">
+        <navigator class="top-nav-item" url="../myhouse/myhouse?toolText=我的房屋" open-type="navigate">
             <image class="nav-img" src="../../images/house.png" mode="aspectFit" />
             <text>我的房屋</text>
-        </view>
-        <view class="top-nav-item">
+        </navigator>
+        <navigator class="top-nav-item" url="../online-report/online-report" open-type="navigate">
             <image class="nav-img" src="../../images/myfix.png" mode="aspectFit" />
             <text>在线报修</text>
-        </view>
-        <view class="top-nav-item">
+        </navigator>
+        <navigator class="top-nav-item" url="../myhouse/myhouse" open-type="navigate">
             <image class="nav-img" src="../../images/visitor.png" mode="aspectFit" />
             <text>访客邀请</text>
-        </view>
+        </navigator>
     </view>
     <view class="banner">
         <image class="banner-img" src="../../images/banner.png" mode="aspectFill" />

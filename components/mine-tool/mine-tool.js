@@ -5,14 +5,15 @@ Component({
      * 组件的属性列表
      */
     properties: {
-        toolItem: Object
+        toolItem: Object,
+        my: Object
     },
 
     /**
      * 组件的初始数据
      */
     data: {
-        
+
     },
 
     /**
@@ -21,6 +22,11 @@ Component({
     methods: {
         handleGoTool(e) {
             console.log(e);
+        }
+    },
+    lifetimes: {
+        created(e) {
+            // console.log(e);
         }
     }
 })

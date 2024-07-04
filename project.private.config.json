@@ -9,6 +9,34 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/online-report/online-report",
+          "pathName": "pages/online-report/online-report",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/community/community",
+          "pathName": "pages/community/community",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/myhouse/myhouse",
+          "pathName": "pages/myhouse/myhouse",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/userinfo/userinfo",
           "pathName": "pages/userinfo/userinfo",
           "query": "",

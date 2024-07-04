@@ -1,42 +1,35 @@
-// pages/mine/mine.js
+// pages/online-report/online-report.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        mineTools: [{
-                id: '1',
-                iconPath: '../../images/myhouse.png',
-                iconBgColor: '#56ABB0',
-                toolText: '我的房屋'
-            },
-            {
-                id: '2',
-                iconPath: '../../images/fixed.png',
-                iconBgColor: '#E8BD8A',
-                toolText: '我的报修'
-            },
-            {
-                id: '3',
-                iconPath: '../../images/myvisitor.png',
-                iconBgColor: '#CB665E',
-                toolText: '访客记录'
-            }
+        houseInfoModalStatus: false,
+        houseInfoArr: [
+            111, 222, 333, 444, 555, 666, 777
         ],
-        userInfo: wx.getStorageSync('userInfo'),
-        my: {
-            myhouse: [12,23],
-            myfixed: [],
-            myvisitor: []
-        }
+        houseInfoIndex: 2
+    },
+    handleHouseInfoModalStatus() {
+
+    },
+    handleChangePickerStatus(e) {
+        this.setData({
+            houseInfoIndex: e.detail.value
+        })
+    },
+    joker(e) {
+        console.log(e);
+        console.log(e.currentTarget);
+        // e.preventDefault()
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        wx.setStorageSync('my', this.data.my)
+
     },
 
     /**

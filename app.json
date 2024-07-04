@@ -3,7 +3,10 @@
     "pages/home/home",
     "pages/mine/mine",
     "pages/login/login",
-    "pages/userinfo/userinfo"
+    "pages/userinfo/userinfo",
+    "pages/myhouse/myhouse",
+    "pages/community/community",
+    "pages/online-report/online-report"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -30,5 +33,13 @@
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "将获取Joker位置的具体信息，用于提供维修地址"
+    }
+  }
 }

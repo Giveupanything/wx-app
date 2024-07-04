@@ -1,0 +1,23 @@
+/* pages/myhouse/myhouse.wxss */
+.tool-wrap {
+    padding-top: 30rpx;
+    background-color: #fafafa;
+}
+
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 300rpx;
+    border-radius: 30rpx;
+    margin: 0 30rpx;
+    background-color: #fff;
+    color: #aaa;
+}
+
+.empty .nav {
+    display: inline;
+    padding: 0 10rpx;
+    color: #5599ff;
+}

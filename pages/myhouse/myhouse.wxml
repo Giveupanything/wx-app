@@ -1,0 +1,10 @@
+<!--pages/myhouse/myhouse.wxml-->
+<view class="tool-wrap">
+    <!-- {{dataArr[0]}} -->
+    <view class="empty" wx:if="{{!dataArr.length}}">
+        您还没有{{text}}，请点击<navigator class="nav" url="../community/community" open-type="navigate">添加</navigator>
+    </view>
+    <view class="list" wx:else>
+        11
+    </view>
+</view>

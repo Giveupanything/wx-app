@@ -1,0 +1,39 @@
+<!--pages/online-report/online-report.wxml-->
+<view class="online-report">
+    <view class="report-house">
+        <view class="title">报修房屋</view>
+        <view class="house-info info-item">
+            <picker class="picker" bindchange="handleChangePickerStatus" mode="selector" header-text="Joker" value="{{houseInfoIndex}}" range="{{houseInfoArr}}">
+                <input class="p-inp" type="text" placeholder-class="phcolor" placeholder="请选择房屋信息" />
+                <!-- <view class="picker">{{houseInfoArr[houseInfoIndex]}}</view> -->
+            </picker>
+            <text bindchange="handleChangePickerStatus" class="more">></text>
+        </view>
+    </view>
+    <view class="report-info">
+        <view class="title">报修信息</view>
+        <view class="repair-project info-item">
+            <text class="item">维修项目</text>
+            <input type="text" placeholder-class="phcolor" placeholder="请选择维修项目" />
+            <text class="more">></text>
+        </view>
+        <view class="phone info-item">
+            <text class="item">手机号码</text>
+            <input class="inp" type="number" value="" placeholder="请输入联系电话号码" placeholder-class="phcolor" />
+        </view>
+        <view class="repair-date info-item">
+            <text class="item">预约日期</text>
+            <input type="text" focus="{{false}}" placeholder-class="phcolor" placeholder="请选择上门维修日期" />
+            <text class="more">></text>
+        </view>
+        <view class="problem-desc info-item">
+            <view class="item">问题描述</view>
+            <textarea class="textarea" maxlength="50" value="" placeholder-class="phcolor" placeholder="请填写报修内容，工作人员将快速帮您解决问题。" />
+        </view>
+        <view class="problem-attach info-item">
+            <view class="item">问题附件</view>
+            <button>Joker</button>
+        </view>
+    </view>
+    <view class="submit-report">提交报修</view>
+</view>

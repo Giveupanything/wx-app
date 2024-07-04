@@ -1,0 +1,8 @@
+<!--pages/community/community.wxml-->
+<view class="current-position">
+<view class="title">当前地点</view>
+<view class="relocation">重新定位</view>
+</view>
+<view class="near-community">
+<view class="title">附近社区</view>
+</view>
