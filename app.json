@@ -6,7 +6,8 @@
     "pages/userinfo/userinfo",
     "pages/myhouse/myhouse",
     "pages/community/community",
-    "pages/online-report/online-report"
+    "pages/online-report/online-report",
+    "pages/broadcast-item/broadcast-item"
   ],
   "window": {
     "navigationBarTextStyle": "black",

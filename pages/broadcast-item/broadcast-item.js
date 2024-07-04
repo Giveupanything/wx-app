@@ -1,32 +1,38 @@
-// pages/home/home.js
+// pages/broadcast-item/broadcast-item.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        broadcastData: []
-    },
-    handleGoBroadcastItem(e) {
-        console.log(e.currentTarget.dataset);
-        let id = e.currentTarget.dataset.broadcastdata.id
-        wx.navigateTo({
-            url: `../broadcast-item/broadcast-item?id=${id}`,
-        })
+        id: '',
+        broadcastData: {}
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        // console.log(options);
+        this.setData({
+            id: options.id
+        })
+
         wx.request({
-            url: 'https://live-api.itheima.net/announcement',
-            method: 'GET',
+            url: `https://live-api.itheima.net/announcement/${this.data.id}`,
+            method: "GET",
             success: (res) => {
+                // console.log('success');
                 console.log(res);
                 this.setData({
                     broadcastData: res.data.data
                 })
+            },
+            error: function () {
+                console.log('error');
+            },
+            complete: function () {
+                console.log('complete');
             }
         })
     },

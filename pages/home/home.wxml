@@ -24,7 +24,7 @@
             <text>公告</text>
         </view>
 
-        <view class="broadcast-item" wx:for="{{broadcastData}}" wx:for-index="idx" wx:key="idx">
+        <view bind:tap="handleGoBroadcastItem" data-broadcastData="{{item}}" class="broadcast-item" wx:for="{{broadcastData}}" wx:for-index="idx" wx:key="idx">
             <broadcast-item data="{{item}}"></broadcast-item>
         </view>
     </view>

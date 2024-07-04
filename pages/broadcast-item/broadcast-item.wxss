@@ -1,0 +1,35 @@
+/* pages/broadcast-item/broadcast-item.wxss */
+.wrap {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20rpx 30rpx;
+}
+
+.head {
+    border-bottom: 1rpx solid #ccc;
+    padding-bottom: 20rpx;
+    margin-bottom: 40rpx;
+}
+
+.title {
+    font-size: 34rpx;
+    font-weight: bold;
+}
+
+.title-attach {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50rpx;
+    box-sizing: border-box;
+    padding-top: 10rpx;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.main{
+    color: #333;
+    line-height: 48rpx;
+}

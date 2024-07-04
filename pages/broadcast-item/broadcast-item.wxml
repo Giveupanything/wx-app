@@ -1,0 +1,12 @@
+<!--pages/broadcast-item/broadcast-item.wxml-->
+<view class="wrap">
+    <view class="head">
+        <!-- {{id}} -->
+        <view class="title">{{broadcastData.title}}</view>
+        <view class="title-attach">
+            <text>{{broadcastData.creatorName}}</text>
+            <text>{{broadcastData.createdAt}}</text>
+        </view>
+    </view>
+    <rich-text class="main" nodes="{{broadcastData.content}}" />
+</view>
