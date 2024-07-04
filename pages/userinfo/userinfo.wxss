@@ -1,0 +1,38 @@
+/* pages/userinfo/userinfo.wxss */
+.userinfo-container>.userinfo-nickname,
+.userinfo-container>.userinfo-avatar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    /* background-color: red; */
+    border-bottom: 1rpx solid #eee;
+}
+
+.userinfo-container>.userinfo-nickname :nth-child(1) {
+    flex-grow: 1;
+
+}
+
+.userinfo-container>.userinfo-avatar :nth-child(1) {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.userinfo-avatar .avatar {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    margin: 0 15rpx;
+    /* background-color: #ccc; */
+    text-align: right;
+    overflow: hidden;
+}
+
+.userinfo-nickname .nickname-inp {
+    width: 500rpx;
+    text-align: right;
+}

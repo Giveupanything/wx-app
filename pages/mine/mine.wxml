@@ -1,9 +1,9 @@
 <!--pages/mine/mine.wxml-->
 <view class="mine-container">
     <view class="mine-header">
-        <image class="user-avatar" src="../../images/home.png" mode="aspectFit" />
-        <text class="user-nickname">1414</text>
-        <view class="complete-userinfo">去完善信息＞</view>
+        <image class="user-avatar" src="{{userInfo.avatarURL}}" mode="aspectFit" />
+        <text class="user-nickname">{{userInfo.nickname}}</text>
+        <navigator url="/pages/userinfo/userinfo" open-type="navigate" class="complete-userinfo">去完善信息＞</navigator>
     </view>
     <view class="mine-main">
         <block wx:for="{{mineTools}}" wx:for-item="toolItem" wx:key="index">

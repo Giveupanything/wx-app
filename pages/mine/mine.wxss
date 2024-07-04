@@ -24,7 +24,7 @@
     width: 100rpx;
     height: 100rpx;
     border-radius: 50%;
-    border: 10rpx solid red;
+    /* border: 10rpx solid red; */
     overflow: hidden;
 }
 
