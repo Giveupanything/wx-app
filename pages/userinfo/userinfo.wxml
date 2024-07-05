@@ -1,12 +1,14 @@
 <!--pages/userinfo/userinfo.wxml-->
-<view class="userinfo-container">
-    <button binderror="handleError" open-type="chooseAvatar" class="userinfo-avatar" bindchooseavatar="handleChooseAvatar">
-        <text>头像</text>
-        <image class="avatar" src="{{userInfo.avatarURL}}" mode="aspectFill" />
-        <text>></text>
-    </button>
-    <view class="userinfo-nickname">
-        <text>昵称</text>
-        <input class="nickname-inp" bindblur="handleUserNikname" type="nickname" value="{{userInfo.nickname}}" />
+<authorization>
+    <view class="userinfo-container">
+        <button binderror="handleError" open-type="chooseAvatar" class="userinfo-avatar" bindchooseavatar="handleChooseAvatar">
+            <text>头像</text>
+            <image class="avatar" src="{{userInfo.avatarURL}}" mode="aspectFill" />
+            <text>></text>
+        </button>
+        <view class="userinfo-nickname">
+            <text>昵称</text>
+            <input class="nickname-inp" bindblur="handleUserNikname" type="nickname" value="{{userInfo.nickname}}" />
+        </view>
     </view>
-</view>
+</authorization>

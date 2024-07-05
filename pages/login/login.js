@@ -62,12 +62,29 @@ Page({
         const flag1 = this.handleCheckMobile(this.data.mobile)
         const flag2 = this.handleCheckVerify(this.data.verifyCode, this.data.resCode)
         if (flag1 && flag2) {
-            console.log(postLoginAPI);
+            // console.log(postLoginAPI);
             const result = await postLoginAPI({
                 mobile: this.data.mobile,
                 code: this.data.verifyCode
             })
-            console.log(result);
+            // console.log(result);
+
+            // 登录成功，返回到登陆前的页面
+            if (result.data.message === '操作成功') {
+                let {
+                    token,
+                    refreshToken
+                } = result.data.data
+                wx.setStorageSync('token', token)
+                wx.setStorageSync('refreshToken', refreshToken)
+
+                let app = getApp()
+                app.token = token
+                // wx.navigateTo({
+                //     url: '',
+                // })
+                wx.navigateBack(1)
+            }
         }
     },
 
