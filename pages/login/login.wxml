@@ -7,7 +7,10 @@
     <view class="main">
         <view class="phone">
             <input class="phone-inp" type="number" model:value="{{mobile}}" placeholder="请输入手机号码" placeholder-class="phclass" />
-            <button class="getVerifyCode" plain bind:tap="handleGetVerifyCode">获取验证码</button>
+            <button wx:if="{{!verifyBtnStatus}}" class="getVerifyCode" plain bind:tap="handleGetVerifyCode">获取验证码</button>
+            <van-count-down wx:else use-slot time="{{6*1000}}" bind:change="countDownChange">
+                <text>{{timeData.seconds}}秒后重新获取</text>
+            </van-count-down>
         </view>
         <view class="verify">
             <input model:value="{{verifyCode}}" class="verify-inp" type="number" placeholder="请输入6位验证码" placeholder-class="phclass" />

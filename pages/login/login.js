@@ -12,11 +12,26 @@ Page({
     data: {
         mobile: '13333333333',
         verifyCode: '',
-        resCode: ''
+        resCode: '',
+        verifyBtnStatus: false
     },
     async handleGetVerifyCode() {
         const flag = this.handleCheckMobile(this.data.mobile)
         if (!flag) return
+
+        // 展示loading
+        const a = await wx.showToast({
+            title: '正在加载...',
+            icon: 'loading',
+            mask: true,
+            duration: 1000
+        })
+
+        console.log(a);
+
+        this.setData({
+            verifyBtnStatus: true
+        })
 
         const result = await getVerifyCodeAPI({
             mobile: this.data.mobile
@@ -86,6 +101,13 @@ Page({
                 wx.navigateBack(1)
             }
         }
+    },
+    countDownChange(ev) {
+        // console.log(ev);
+        this.setData({
+            timeData: ev.detail,
+            verifyBtnStatus: ev.detail.minutes === 1 || ev.detail.seconds > 0
+        })
     },
 
     /**

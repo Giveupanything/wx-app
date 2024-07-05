@@ -43,6 +43,8 @@
         }
     },
     "usingComponents": {
-        "authorization": "/components/authorization/authorization"
+        "authorization": "/components/authorization/authorization",
+        "van-button": "@vant/weapp/button/index",
+        "van-count-down": "@vant/weapp/count-down/index"
     }
 }
