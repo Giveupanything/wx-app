@@ -1,2 +1,30 @@
 <!--pages/houseDetail/houseDetail.wxml-->
-<text>pages/houseDetail/houseDetail.wxml</text>
+<scroll-view class="scroll" scroll-y enhanced show-scrollbar="{{false}}">
+    <view class="house-detail">
+        <van-cell-group custom-class="cell-group" border="{{false}}" title="房屋信息">
+            <van-cell title="{{houseDetail.point}}">
+                <text wx:if="{{houseDetail.status===1}}" class="tag info">正在审核</text>
+                <text wx:if="{{houseDetail.status===2}}" class="tag success">审核通过</text>
+                <text wx:if="{{houseDetail.status===3}}" class="tag success">审核失败</text>
+            </van-cell>
+        </van-cell-group>
+        <van-cell-group value-class="cell-group" title="业主信息" border="{{false}}">
+            <van-cell custom-class="cell-label" title-width="200rpx" title="房间号" value="{{houseDetail.building}}{{houseDetail.room}}"></van-cell>
+            <van-cell custom-class="cell-label" title-width="200rpx" title="业主" value="{{houseDetail.name}}"></van-cell>
+            <van-cell custom-class="cell-label" title-width="200rpx" title="手机号" value="{{houseDetail.mobile}}"></van-cell>
+        </van-cell-group>
+        <view class="id-card">
+            <van-cell custom-class="cell-label" title="本人身份证照片"></van-cell>
+            <view class="id-card-front">
+                <image src="{{houseDetail.idcardFrontUrl}}" mode="aspectFit" />
+            </view>
+            <view class="id-card-back">
+                <image src="{{houseDetail.idcardBackUrl}}" mode="aspectFit" />
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<view class="toolbar" bind:tap="editHouse">
+    <text class="enjoy-icon icon-edit"></text>
+    <text class="button-text">修改房屋信息</text>
+</view>
