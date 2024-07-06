@@ -1,54 +1,56 @@
 {
-    "pages": [
-        "pages/home/home",
-        "pages/mine/mine",
-        "pages/login/login",
-        "pages/userinfo/userinfo",
-        "pages/myhouse/myhouse",
-        "pages/community/community",
-        "pages/online-report/online-report",
-        "pages/broadcast-item/broadcast-item"
-    ],
-    "window": {
-        "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "享+社区",
-        "navigationBarBackgroundColor": "#d3dde7"
-    },
-    "tabBar": {
-        "color": "#bfbfbf",
-        "selectedColor": "#568FAD",
-        "list": [{
-                "pagePath": "pages/home/home",
-                "text": "首页",
-                "iconPath": "images/home.png",
-                "selectedIconPath": "images/home-active.png"
-            },
-            {
-                "pagePath": "pages/mine/mine",
-                "text": "我的",
-                "iconPath": "images/mine.png",
-                "selectedIconPath": "images/mine-active.png"
-            }
-        ]
-    },
-    "componentFramework": "glass-easel",
-    "sitemapLocation": "sitemap.json",
-    "lazyCodeLoading": "requiredComponents",
-    "requiredPrivateInfos": [
-        "getLocation"
-    ],
-    "permission": {
-        "scope.userLocation": {
-            "desc": "将获取Joker位置的具体信息，用于提供维修地址"
-        }
-    },
-    "usingComponents": {
-        "authorization": "/components/authorization/authorization",
-        "van-button": "@vant/weapp/button/index",
-        "van-count-down": "@vant/weapp/count-down/index",
-        "van-swipe-cell": "@vant/weapp/swipe-cell/index",
-        "van-cell": "@vant/weapp/cell/index",
-        "van-cell-group": "@vant/weapp/cell-group/index"
-
+  "pages": [
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/login/login",
+    "pages/userinfo/userinfo",
+    "pages/myhouse/myhouse",
+    "pages/community/community",
+    "pages/online-report/online-report",
+    "pages/broadcast-item/broadcast-item",
+    "pages/houseDetail/houseDetail"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "享+社区",
+    "navigationBarBackgroundColor": "#d3dde7"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#568FAD",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine-active.png"
+      }
+    ]
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "将获取Joker位置的具体信息，用于提供维修地址"
     }
+  },
+  "usingComponents": {
+    "authorization": "/components/authorization/authorization",
+    "van-button": "@vant/weapp/button/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
 }

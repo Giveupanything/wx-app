@@ -1,4 +1,6 @@
 // pages/myhouse/myhouse.js
+import Dialog from '@vant/weapp/dialog/dialog';
+
 import {
     getRoomList
 } from '../../api/index.js'
@@ -10,7 +12,62 @@ Page({
     data: {
         houseList: [],
         emptyStatus: true,
-        text: ''
+        text: '',
+        dialogVisible: false
+
+    },
+    swipeClose(e) {
+        console.log(e);
+        let {
+            position,
+            instance
+        } = e.detail
+        if (position === 'right') {
+            // 显示对话框
+            this.setData({
+                dialogVisible: true
+            })
+
+            Dialog.confirm({
+                    title: "qd",
+                    message: '弹窗内容',
+                    theme: 'round-button',
+                })
+
+            // 记录房屋的id和索引
+            this.houseID = e.mark.id
+            this.houseIdx = e.mark.index
+            // 关闭滑块
+            instance.close()
+        }
+    },
+    dialogClose(e) {
+        console.log(e);
+        if (e.detail === 'confirm') this.deleteHouse()
+    },
+    async deleteHouse() {
+        if (!this.houseID) return wx.util2.toast('参数有误')
+        const {
+            code
+        } = await wx.http.delete('/room/' + this.houseID)
+        if (code !== 10000) return wx.util2.toast()
+        this.data.houseList.splice(this.houseIdx, 1)
+        this.setData({
+            houseList: this.data.houseList
+        })
+    },
+    addHouse() {
+        if (this.data.houseList.length === 5) {
+            wx.util2.toast('最多添加5条房屋信息')
+            return
+        }
+
+    },
+    goDetail(e) {
+        // 通过mark:id来传递数据
+        wx.navigateTo({
+          url: '/',
+        })
     },
 
     /**

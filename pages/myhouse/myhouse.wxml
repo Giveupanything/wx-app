@@ -1,5 +1,6 @@
 <!--pages/myhouse/myhouse.wxml-->
 <authorization>
+    <van-dialog title="是否删除已绑定房屋" show-cancel-button bind:close="dialogClose" id="van-dialog" show="{{dialogVisible}}" />
     <view class="tool-wrap">
         <!-- {{dataArr[0]}} -->
         <view class="empty" wx:if="{{!houseList.length}}">
