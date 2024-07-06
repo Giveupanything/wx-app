@@ -45,6 +45,10 @@
     "usingComponents": {
         "authorization": "/components/authorization/authorization",
         "van-button": "@vant/weapp/button/index",
-        "van-count-down": "@vant/weapp/count-down/index"
+        "van-count-down": "@vant/weapp/count-down/index",
+        "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index"
+
     }
 }

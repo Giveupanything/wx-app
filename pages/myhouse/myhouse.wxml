@@ -2,11 +2,35 @@
 <authorization>
     <view class="tool-wrap">
         <!-- {{dataArr[0]}} -->
-        <view class="empty" wx:if="{{!dataArr.length}}">
+        <view class="empty" wx:if="{{!houseList.length}}">
             您还没有{{text}}，请点击<navigator class="nav" url="../community/community" open-type="navigate">添加</navigator>
         </view>
-        <view class="list" wx:else>
-            11
-        </view>
+        <block class="list" wx:else>
+            <scroll-view class="scroll" scroll-y show-scrollbar="{{false}}" enhanced>
+                <view class="houses">
+                    <view class="houses-title">房屋信息</view>
+                    <view class="houses-list">
+                        <van-swipe-cell wx:for="{{houseList}}" wx:key="id" mark:index="{{index}}" mark:id="{{item.id}}" async-close bind:close="swipeClose" right-width="{{70}}">
+                            <van-cell-group custom-class="cell-group" mark:id="{{item.id}}" bind:tap="goDetail" border="{{false}}">
+                                <van-cell custom-class="cell-label" size="large" title="{{item.point}}">
+                                    <text wx:if="{{item.status===1}}" class="tag info">正在审核</text>
+                                    <text wx:if="{{item.status===2}}" class="tag success">审核通过</text>
+                                    <text wx:if="{{item.status===3}}" class="tag fail">审核失败</text>
+                                </van-cell>
+                                <van-cell title-class="cell-title" value-class="cell-value" title="房间号" border="{{false}}" value="{{item.building}}{{item.room}}">
+                                </van-cell>
+                                <van-cell title-class="cell-title" value-class="cell-value" title="业主" border="{{false}}" value="{{item.name}}"></van-cell>
+                            </van-cell-group>
+                            <view class="cell-del" slot="right">删除</view>
+                        </van-swipe-cell>
+                    </view>
+                </view>
+            </scroll-view>
+            <!-- <view wx:if="{{houseList.length<6}}" class="toolbar" bind:tap="addHouse"> -->
+            <view class="toolbar" bind:tap="addHouse">
+                <text class="enjoy-icon icon-add"></text>
+                <text class="button-text">添加新房屋</text>
+            </view>
+        </block>
     </view>
 </authorization>

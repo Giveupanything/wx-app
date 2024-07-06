@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vant/weapp": "^1.11.6"
+    "@vant/weapp": "^1.11.6",
+    "wechat-http": "^0.0.8"
   }
 }

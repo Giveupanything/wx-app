@@ -82,7 +82,7 @@ Page({
                 mobile: this.data.mobile,
                 code: this.data.verifyCode
             })
-            // console.log(result);
+            console.log(result);
 
             // 登录成功，返回到登陆前的页面
             if (result.data.message === '操作成功') {

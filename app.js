@@ -1,37 +1,15 @@
 // app.js
+import util2 from './utils/util2'
+import http from './utils/http'
+wx.util2 = util2
+wx.http = http
+
 App({
     // 封装获取token的函数
     getToken() {
-        // wx.getStorage({
-        //     key: 'token',
-        //     success: (data) => {
-        //         this.token = data
-        //     },
-        //     fail: () => {}
-        // })
-
         this.token = wx.getStorageSync('token')
-        // console.log(this.token, 'app');
+        this.refreshToken = wx.getStorageSync('refreshToken')
     },
-
-    //#region 
-    // routerGuard: {
-    //     beforeEach(to, from, next) {
-    //         console.log('before each');
-    //         if (!isAuthenticated()) {
-    //             wx.navigateTo({
-    //                 url: '/pages/login/login',
-    //             })
-    //         } else {
-    //             next()
-    //         }
-    //     },
-    //     afterEach(to, from) {
-    //         console.log('after each');
-    //     }
-    // },
-    //#endregion
-
     onLaunch() {
         this.getToken()
 

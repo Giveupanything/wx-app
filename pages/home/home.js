@@ -28,7 +28,7 @@ Page({
             url: 'https://live-api.itheima.net/announcement',
             method: 'GET',
             success: (res) => {
-                console.log(res);
+                // console.log(res);
                 this.setData({
                     broadcastData: res.data.data
                 })
