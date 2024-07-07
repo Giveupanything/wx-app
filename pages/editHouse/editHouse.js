@@ -1,27 +1,39 @@
-// pages/houseDetail/houseDetail.js
+// pages/editHouse/editHouse.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        houseDetail: {}
-    },
 
+    },
     async getHouseDetail(id) {
-        if (!id) return wx.util2.toast('参数有误')
         const {
             code,
             data: houseDetail
         } = await wx.http.get('/room/' + id)
         if (code !== 10000) return wx.util2.toast()
         this.setData({
-            houseDetail
+            ...houseDetail
         })
     },
-    editHouse() {
-        wx.navigateTo({
-            url: '/pages/editHouse/editHouse',
+    // 提交审核
+    async submitForm() {
+        if (!this.validate()) return
+        // 获取全部数据，剔除多余参数
+        const {
+            __webviewId__,
+            status,
+            ...data
+        } = this.data
+        const {
+            code
+        } = await wx.http.post('/room', data)
+        if (code !== 10000) return wx.util2.toast('数据提交失败')
+
+        // 返回房屋列表首页
+        wx.navigateBack({
+            delta: 4
         })
     },
 
@@ -29,10 +41,18 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad({
+        point,
+        building,
+        room,
         id
     }) {
-        // console.log(111, this);
-        this.getHouseDetail(id)
+        // 根据id判断是否修改房屋
+        if (id) return this.getHouseDetail(id)
+        this.setData({
+            point,
+            building,
+            room
+        })
     },
 
     /**

@@ -25,16 +25,23 @@ Component({
         attached() {
             // 获取登录凭证，判断用户是否登录
             const app = getApp()
-            // console.log(app.token);
             const isLogin = Boolean(app.token)
-            // console.log(Boolean(app.token));
             // 更新页面数据
             this.setData({
                 isLogin
             })
+            // 获取页面栈
+            const pageStack = getCurrentPages()
+            // 获取页面路径
+            const currentPage = pageStack.pop()
+            // console.log(currentPage);
+            // 未登录的情况下跳转到登录页
             if (!isLogin) {
+                // 使用空白函数覆盖原生的生命周期 onload onshow
+                currentPage.onLoad = () => {}
+                currentPage.onShow = () => {}
                 wx.redirectTo({
-                    url: "/pages/login/login"
+                    url: "/pages/login/login?redirectURL=/" + currentPage.route
                 })
             }
         }

@@ -8,7 +8,10 @@
     "pages/community/community",
     "pages/online-report/online-report",
     "pages/broadcast-item/broadcast-item",
-    "pages/houseDetail/houseDetail"
+    "pages/houseDetail/houseDetail",
+    "pages/editHouse/editHouse",
+    "pages/chooseCommunity/chooseCommunity",
+    "pages/chooseBuilding/chooseBuilding"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -37,7 +40,8 @@
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",
   "requiredPrivateInfos": [
-    "getLocation"
+    "getLocation",
+    "chooseLocation"
   ],
   "permission": {
     "scope.userLocation": {

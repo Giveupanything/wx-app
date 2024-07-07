@@ -61,7 +61,9 @@ Page({
             wx.util2.toast('最多添加5条房屋信息')
             return
         }
-
+        wx.navigateTo({
+            url: '/pages/chooseCommunity/chooseCommunity',
+        })
     },
     goDetail(e) {
         // 通过mark:id来传递数据

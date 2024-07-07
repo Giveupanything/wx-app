@@ -1,0 +1,16 @@
+/* pages/chooseCommunity/chooseCommunity.wxss */
+.relocation {
+    position: absolute;
+}
+
+.cell-group {
+    position: relative;
+}
+
+.cell-value {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding-right: 20rpx;
+}
