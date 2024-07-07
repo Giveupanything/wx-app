@@ -6,10 +6,10 @@ Page({
      * 页面的初始数据
      */
     data: {
-
-    },
-    relocation(){
         
+    },
+    relocation() {
+
     },
     async chooseLocation() {
         const {
@@ -59,6 +59,7 @@ Page({
                         _distance
                     }
                 })
+                // console.log(points);
                 this.setData({
                     points
                 })

@@ -11,7 +11,9 @@
     "pages/houseDetail/houseDetail",
     "pages/editHouse/editHouse",
     "pages/chooseCommunity/chooseCommunity",
-    "pages/chooseBuilding/chooseBuilding"
+    "pages/chooseBuilding/chooseBuilding",
+    "pages/room/room",
+    "pages/form/form"
   ],
   "window": {
     "navigationBarTextStyle": "black",

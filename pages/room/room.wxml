@@ -1,0 +1,6 @@
+<!--pages/room/room.wxml-->
+<view class="room">
+    <van-cell-group border="{{false}}">
+        <van-cell wx:for="{{rooms}}" wx:key="*this" title="{{point}}--{{building}}栋--{{item}}" link-type="navigateTo" url="/pages/form/form?point={{point}}&building={{building}}&room={{item}}" is-link></van-cell>
+    </van-cell-group>
+</view>

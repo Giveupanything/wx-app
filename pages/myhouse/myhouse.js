@@ -28,11 +28,11 @@ Page({
                 dialogVisible: true
             })
 
-            Dialog.confirm({
-                title: "qd",
-                message: '弹窗内容',
-                theme: 'round-button',
-            })
+            // Dialog.confirm({
+            //     title: "qd",
+            //     message: '弹窗内容',
+            //     theme: 'round-button',
+            // })
 
             // 记录房屋的id和索引
             this.houseID = e.mark.id

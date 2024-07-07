@@ -1,2 +1,6 @@
 <!--pages/chooseBuilding/chooseBuilding.wxml-->
-<text>pages/chooseBuilding/chooseBuilding.wxml</text>
+<view class="building">
+    <van-cell-group border="{{false}}">
+        <van-cell wx:for="{{size}}" wx:key="*this" title="{{point}}{{item+1}}{{type}}" link-type="navigateTo" url="/pages/room/room?point={{point}}&building={{item+1+type}}" is-link></van-cell>
+    </van-cell-group>
+</view>

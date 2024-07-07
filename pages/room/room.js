@@ -1,28 +1,28 @@
-// pages/houseDetail/houseDetail.js
+// pages/room/room.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        houseDetail: {},
-        id: ''
+        point: '',
+        building: '',
+        rooms: []
     },
-
-    async getHouseDetail(id) {
-        if (!id) return wx.util2.toast('参数有误')
-        const {
-            code,
-            data: houseDetail
-        } = await wx.http.get('/room/' + id)
-        if (code !== 10000) return wx.util2.toast()
+    fake(point, building) {
+        const size = Math.floor(Math.random() * 5) + 4
+        const rooms = []
+        for (let i = 0; i < size; i++) {
+            const floor = Math.floor(Math.random() * 19) + 1
+            const No = Math.floor(Math.random() * 2) + 1
+            const room = [floor, 0, No].join('')
+            if (rooms.includes(room)) return
+            rooms.push(room)
+        }
         this.setData({
-            houseDetail
-        })
-    },
-    editHouse() {
-        wx.navigateTo({
-            url: '/pages/form/form?id=' + this.data.id,
+            rooms,
+            point,
+            building
         })
     },
 
@@ -30,13 +30,12 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad({
-        id
+        point,
+        building
     }) {
-        // console.log(111, this);
-        this.setData({
-            id
-        })
-        this.getHouseDetail(id)
+        // 创建房间
+        console.log(point, building);
+        this.fake(point, building)
     },
 
     /**

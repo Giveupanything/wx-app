@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/myhouse/myhouse",
+          "pathName": "pages/myhouse/myhouse",
+          "query": "toolText=%E6%88%91%E7%9A%84%E6%88%BF%E5%B1%8B",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/houseDetail/houseDetail",
           "pathName": "pages/houseDetail/houseDetail",
           "query": "id=7046174325448704",
