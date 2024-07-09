@@ -1,0 +1,69 @@
+/* pages/repairDetail/repairDetail.wxss */
+.tag {
+    /* border: 1rpx solid #000; */
+    border-radius: 12rpx;
+    padding: 6rpx 12rpx;
+    font-size: 26rpx;
+}
+
+.info {
+    background-color: #E9F1FC;
+    color: #469CCF;
+}
+
+.success {
+    background-color: #EBF8F1;
+    color: #2FA766;
+}
+
+.cancel {
+    background-color: rgb(214, 211, 210);
+    color: rgb(167, 162, 162);
+}
+
+.label {
+    margin: 20rpx 0;
+    font-size: 28rpx;
+    color: #000;
+}
+
+.attachment {
+    padding: 10rpx 30rpx;
+}
+
+.title {
+    padding: 20rpx 0;
+}
+
+.toolbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 170rpx;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 -2rpx 2rpx 2rpx #ddd;
+}
+
+.scroll {
+    /* height: 1270rpx; */
+    background-color: #fff;
+}
+
+.image {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.scroll-image {
+    height: 220rpx;
+}
+
+.wrap {
+    height: 100vh;
+    background-color: #eee;
+}

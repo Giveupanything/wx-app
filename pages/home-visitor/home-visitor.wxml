@@ -1,0 +1,37 @@
+<!--pages/home-visitor/home-visitor.wxml-->
+<scroll-view class="scroll" scroll-y enhanced show-scrollbar="{{false}}">
+    <view class="house-detail">
+        <van-action-sheet bind:close="closeHouseLayer" bind:cancel="closeHouseLayer" bind:select="selectHouseInfo" round show="{{houseLayerVisible}}" actions="{{houseList}}" cancel-text="取消" title="请选择房屋信息" />
+        <van-cell-group border="{{false}}" title="房屋信息">
+            <van-cell title="{{houseName || houseInfo || '请选择房屋信息'}}" title-class="{{houseName && 'active-cell'}}" bind:click="openHouseLayer" is-link border="{{false}}" />
+        </van-cell-group>
+        <van-cell-group value-class="cell-group" title="访客信息" border="{{false}}">
+            <van-cell custom-class="cell-label" title-width="200rpx" title="姓名">
+                <input model:value="{{name}}" class="name-inp" type="text" placeholder="请填写访客的真实姓名" placeholder-class="name-plh" />
+            </van-cell>
+            <van-cell custom-class="cell-label" title-width="200rpx" title="性别">
+                <view class="gender">
+                    <radio-group bindchange="handleGenderStatus">
+                        <label for="">
+                            <radio color="#49f" class="gender-inp" type="radio" name="gender" value="{{1}}" checked />男
+                        </label>
+                        <label for="">
+                            <radio color="#49f" class="gender-inp" type="radio" name="gender" value="{{0}}" />女
+                        </label>
+                    </radio-group>
+                </view>
+            </van-cell>
+            <van-cell custom-class="cell-label" title-width="200rpx" title="手机号">
+                <input model:value="{{mobile}}" class="name-inp" type="number" placeholder="请输入访客的手机号" placeholder-class="name-plh" />
+            </van-cell>
+        </van-cell-group>
+        <van-cell title-width="100" title="预约日期" value-class="{{visitDate && 'active-cell'}}" bind:click="openDateLayer" value="{{visitDate || '请选择上门维修日期'}}" is-link />
+        <van-popup bind:close="closeDateLayer" round show="{{dateLayerVisible}}" position="bottom">
+            <van-datetime-picker min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:cancel="closeDateLayer" bind:confirm="selectDateInfo" type="datetime" value="{{visitDate}}" />
+        </van-popup>
+    </view>
+</scroll-view>
+<view class="toolbar" bind:tap="goPassport">
+    <text class="enjoy-icon icon-edit"></text>
+    <text class="button-text">确认</text>
+</view>

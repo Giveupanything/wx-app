@@ -1,0 +1,70 @@
+/* pages/passport/passport.wxss */
+.toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 160rpx;
+    background-color: #fff;
+    box-shadow: 0 -3rpx 2rpx 2rpx #eee;
+}
+
+.button-share,
+.button-save {
+    background-color: transparent;
+    border: none !important;
+}
+
+.countdown {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100rpx 100rpx 40rpx;
+    text-align: center;
+}
+
+.van-count-down {
+    font-size: 40rpx;
+    color: red;
+}
+
+.label {
+    font-size: 26rpx;
+    margin-top: 10rpx;
+}
+
+.qrcode {
+    text-align: center;
+}
+
+.description {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20rpx;
+    text-align: center;
+}
+
+.house {
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+}
+
+.tips {
+    font-size: 24rpx;
+    color: #666;
+}
+
+.item {
+    display: inline-block;
+    width: 70rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 36rpx;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 2px;
+}

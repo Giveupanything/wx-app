@@ -9,24 +9,27 @@ Page({
                 id: '1',
                 iconPath: '../../images/myhouse.png',
                 iconBgColor: '#56ABB0',
-                toolText: '我的房屋'
+                toolText: '我的房屋',
+                path: '/pages/myhouse/myhouse'
             },
             {
                 id: '2',
                 iconPath: '../../images/fixed.png',
                 iconBgColor: '#E8BD8A',
-                toolText: '我的报修'
+                toolText: '我的报修',
+                path: '/pages/myrepair/myrepair'
             },
             {
                 id: '3',
                 iconPath: '../../images/myvisitor.png',
                 iconBgColor: '#CB665E',
-                toolText: '访客记录'
+                toolText: '访客记录',
+                path: '/pages/visitorRecord/visitorRecord'
             }
         ],
         userInfo: wx.getStorageSync('userInfo'),
         my: {
-            myhouse: [12,23],
+            myhouse: [12, 23],
             myfixed: [],
             myvisitor: []
         }

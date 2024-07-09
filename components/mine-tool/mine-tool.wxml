@@ -1,5 +1,5 @@
 <!--components/mine-tool/mine-tool.wxml-->
-<navigator url="/pages/myhouse/myhouse?toolText={{toolItem.toolText}}" open-type="navigate" class="tool-item">
+<navigator url="{{toolItem.path}}?toolText={{toolItem.toolText}}" open-type="navigate" class="tool-item">
     <view class="tool-icon-wrap" style="background-color: {{toolItem.iconBgColor}};">
         <image class="tool-icon" src="{{toolItem.iconPath}}" mode="aspectFill" />
     </view>

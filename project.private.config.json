@@ -9,6 +9,27 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/home-visitor/home-visitor",
+          "pathName": "pages/home-visitor/home-visitor",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/online-report/online-report",
+          "pathName": "pages/online-report/online-report",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/home-visitor/home-visitor",
+          "pathName": "pages/home-visitor/home-visitor",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/myhouse/myhouse",
           "pathName": "pages/myhouse/myhouse",
           "query": "toolText=%E6%88%91%E7%9A%84%E6%88%BF%E5%B1%8B",

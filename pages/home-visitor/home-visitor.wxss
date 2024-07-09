@@ -1,0 +1,120 @@
+/* pages/home-visitor/home-visitor.wxss */
+/* pages/form/form.wxss */
+/* pages/houseDetail/houseDetail.wxss */
+.scroll {
+    height: 1280rpx;
+}
+
+.houses-title {
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    box-sizing: border-box;
+    padding-left: 30rpx;
+    font-size: 24rpx;
+    color: #777;
+}
+
+.tag {
+    /* border: 1rpx solid #000; */
+    border-radius: 12rpx;
+    padding: 6rpx 12rpx;
+    font-size: 26rpx;
+}
+
+.info {
+    background-color: #E9F1FC;
+    color: #469CCF;
+}
+
+.success {
+    background-color: #EBF8F1;
+    color: #2FA766;
+}
+
+.fail {
+    background-color: rgb(228, 75, 49);
+    color: rgb(238, 22, 22);
+}
+
+.cell-group {
+    /* background-color: red; */
+    /* background-color: #000; */
+}
+
+.cell-label {
+    border-bottom: 1rpx solid #eee;
+}
+
+.cell-joker {
+    color: #ccc;
+}
+
+.cell-title {
+    color: #888;
+    background-color: #ccc;
+}
+
+.cell-value {
+    color: #000;
+}
+
+.id-card-front,
+.id-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: #ddd;
+    height: 450rpx;
+}
+
+.front,
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 36rpx;
+}
+
+.toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 160rpx;
+    background-color: #fff;
+    box-shadow: 0 -3rpx 2rpx 2rpx #eee;
+}
+
+.joker {
+    background-color: red !important;
+}
+
+.name-inp {
+    color: #000;
+}
+
+.name-plh {
+    color: #aaa;
+}
+
+.gender {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 34rpx;
+    color: #000;
+}
+
+.gender-inp {
+    margin-right: 5rpx;
+}
+.active-cell {
+    color: #000;
+}

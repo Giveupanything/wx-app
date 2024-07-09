@@ -13,7 +13,13 @@
     "pages/chooseCommunity/chooseCommunity",
     "pages/chooseBuilding/chooseBuilding",
     "pages/room/room",
-    "pages/form/form"
+    "pages/form/form",
+    "pages/home-visitor/home-visitor",
+    "pages/myrepair/myrepair",
+    "pages/repairDetail/repairDetail",
+    "pages/visitor/visitor",
+    "pages/passport/passport",
+    "pages/visitorRecord/visitorRecord"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -57,6 +63,10 @@
     "van-swipe-cell": "@vant/weapp/swipe-cell/index",
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
-    "van-dialog": "@vant/weapp/dialog/index"
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-uploader": "@vant/weapp/uploader/index"
   }
 }

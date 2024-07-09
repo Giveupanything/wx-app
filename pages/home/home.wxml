@@ -10,7 +10,7 @@
             <image class="nav-img" src="../../images/myfix.png" mode="aspectFit" />
             <text>在线报修</text>
         </navigator>
-        <navigator class="top-nav-item" url="../myhouse/myhouse" open-type="navigate">
+        <navigator class="top-nav-item" url="../home-visitor/home-visitor" open-type="navigate">
             <image class="nav-img" src="../../images/visitor.png" mode="aspectFit" />
             <text>访客邀请</text>
         </navigator>

@@ -1,41 +1,20 @@
-<!--pages/online-report/online-report.wxml-->
-<authorization>
-    <view class="online-report">
-        <view class="report-house">
-            <view class="title">报修房屋</view>
-            <view class="house-info info-item">
-                <picker class="picker" bindchange="handleChangePickerStatus" mode="selector" header-text="Joker" value="{{houseInfoIndex}}" range="{{houseInfoArr}}">
-                    <input class="p-inp" type="text" placeholder-class="phcolor" placeholder="请选择房屋信息" />
-                    <!-- <view class="picker">{{houseInfoArr[houseInfoIndex]}}</view> -->
-                </picker>
-                <text bindchange="handleChangePickerStatus" class="more">></text>
-            </view>
-        </view>
-        <view class="report-info">
-            <view class="title">报修信息</view>
-            <view class="repair-project info-item">
-                <text class="item">维修项目</text>
-                <input type="text" placeholder-class="phcolor" placeholder="请选择维修项目" />
-                <text class="more">></text>
-            </view>
-            <view class="phone info-item">
-                <text class="item">手机号码</text>
-                <input class="inp" type="number" value="" placeholder="请输入联系电话号码" placeholder-class="phcolor" />
-            </view>
-            <view class="repair-date info-item">
-                <text class="item">预约日期</text>
-                <input type="text" focus="{{false}}" placeholder-class="phcolor" placeholder="请选择上门维修日期" />
-                <text class="more">></text>
-            </view>
-            <view class="problem-desc info-item">
-                <view class="item">问题描述</view>
-                <textarea class="textarea" maxlength="50" value="" placeholder-class="phcolor" placeholder="请填写报修内容，工作人员将快速帮您解决问题。" />
-            </view>
-            <view class="problem-attach info-item">
-                <view class="item">问题附件</view>
-                <button>Joker</button>
-            </view>
-        </view>
-        <view class="submit-report">提交报修</view>
-    </view>
-</authorization>
+<van-action-sheet bind:close="closeHouseLayer" bind:cancel="closeHouseLayer" bind:select="selectHouseInfo" round show="{{houseLayerVisible}}" actions="{{houseList}}" cancel-text="取消" title="选择报修房屋" />
+<van-cell-group border="{{false}}" title="报修房屋">
+    <van-cell title="{{houseName || houseInfo || '请选择报修房屋'}}" title-class="{{houseName && 'active-cell'}}" bind:click="openHouseLayer" is-link border="{{false}}" />
+</van-cell-group>
+<van-action-sheet bind:close="closeRepairLayer" bind:cancel="closeRepairLayer" bind:select="selectRepairItemInfo" round show="{{repairLayerVisible}}" actions="{{repairItem}}" cancel-text="取消" title="选择维修项目" />
+<van-cell title-width="100" title="维修项目" value-class="{{repairItemName && 'active-cell'}}" bind:click="openRepairLayer" value="{{repairItemName || '请选择维修项目'}}" is-link />
+<van-cell title-width="100" title="手机号码">
+    <input type="number" placeholder="请输入联系电话号码" model:value="{{mobile}}" />
+</van-cell>
+<van-cell title-width="100" title="预约日期" value-class="{{appointment && 'active-cell'}}" bind:click="openDateLayer" value="{{appointment || '请选择上门维修日期'}}" is-link />
+<van-popup bind:close="closeDateLayer" round show="{{dateLayerVisible}}" position="bottom">
+    <van-datetime-picker min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:cancel="closeDateLayer" bind:confirm="selectDateInfo" type="datetime" value="{{currentDate}}" />
+</van-popup>
+<view class="desc">问题描述</view>
+<textarea maxlength="30" class="ta" placeholder="请填写报修内容，工作人员将快速帮您解决问题" model:value="{{description}}" />
+<view class="attach">问题附件</view>
+<view class="upload">
+    <van-uploader bind:after-read="uploadPicture" max-count="6" preview-size="100" file-list="{{attachment}}" />
+</view>
+<view class="submit-report" bind:tap="submitForm">提交报修</view>

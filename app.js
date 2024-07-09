@@ -1,6 +1,8 @@
 // app.js
+import utils from './utils/util'
 import util2 from './utils/util2'
 import http from './utils/http'
+wx.utils = utils
 wx.util2 = util2
 wx.http = http
 
